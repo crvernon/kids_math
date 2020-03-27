@@ -1,3 +1,10 @@
+# jupyter
+math2_part1/.ipynb_checkpoints
+
+# pycharm
+.idea
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
