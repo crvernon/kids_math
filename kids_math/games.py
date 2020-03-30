@@ -1,11 +1,12 @@
 from kids_math.utils import valid_answer
-from kids_math.gifs import PeterRabbitGif
+from kids_math.gifs import PeterRabbitGif, FrozenGif
 
 
 def greater_than_less_than(first_number, second_number):
     """Fill in.
 
     """
+
     gifs = PeterRabbitGif()
     acceptable = ('=', '>', '<')
 
@@ -45,3 +46,37 @@ def greater_than_less_than(first_number, second_number):
 
     print("Sorry, either try again or ask for help.")
     return gifs.nope()
+
+
+def add_to_five(number):
+    """Fill in.
+
+    """
+    gifs = FrozenGif()
+    acceptable = (int, float)
+
+    if number in acceptable:
+
+        # get answer
+        answer = 5 + number
+
+        response = input("Enter the answer to 5 + {}?".format(number))
+        type_response = type(response)
+
+        wrong_response = "Sorry! 5 + {} is not equal to {}.  Try again...".format(number, response)
+
+        correct = 0
+        while correct < 5:
+
+            if (type_response in acceptable) and (response == answer):
+                print('\n CORRECT!!! GREAT WORK!!!')
+                return gifs.walking()
+
+            elif (type_response in acceptable) and (response != answer):
+
+                response = input(wrong_response)
+                
+                correct += 1
+
+        print("Sorry, either try again or ask for help.")
+        return gifs.olaf_heart()
