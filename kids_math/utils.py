@@ -1,5 +1,7 @@
 """Common utility functions for the `kids_math` package"""
 
+from kids_math.video import GoodMorning
+
 
 def valid_answer(response, acceptable, statement):
     """Check value and iterate until valid or too many attempts.
@@ -51,4 +53,5 @@ def say_hello_fun(name):
     :param name:                            string;  person's name
 
     """
-    pass
+    if name == name.lower():
+        return GoodMorning().play_video()
