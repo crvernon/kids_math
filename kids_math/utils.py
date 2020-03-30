@@ -41,7 +41,14 @@ def skip_counting(start_number, through_number, by_number):
     :return:                                generator
 
     """
-
     for i in range(start_number, through_number + by_number, start_number):
         yield i
 
+
+def say_hello_fun(name):
+    """
+
+    :param name:                            string;  person's name
+
+    """
+    pass
