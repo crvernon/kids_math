@@ -8,5 +8,5 @@ setup(
     license='MIT',
     author='Chris R. Vernon',
     author_email='',
-    description='A Jupyter notebook Python accompaniment for my kids "The Good and the Beautiful" math curriculum  '
+    description='A Jupyter notebook Python accompaniment for my kids "The Good and the Beautiful" math curriculum'
 )
