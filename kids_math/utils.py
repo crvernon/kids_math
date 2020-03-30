@@ -38,8 +38,10 @@ def skip_counting(start_number, through_number, by_number):
     :param through_number:                  integer;  number to count to
     :param by_number:                       integer;  number to count by
 
+    :return:                                generator
+
     """
 
     for i in range(start_number, through_number + by_number, start_number):
-        print(i)
+        yield i
 

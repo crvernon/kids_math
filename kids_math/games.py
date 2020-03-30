@@ -1,14 +1,12 @@
-from matplotlib.pyplot import imshow
-
 from kids_math.utils import valid_answer
-from kids_math.gifs import peter_rabbit_winking
-
+from kids_math.gifs import PeterRabbitGif
 
 
 def greater_than_less_than(first_number, second_number):
     """Fill in.
 
     """
+    gifs = PeterRabbitGif()
     acceptable = ('=', '>', '<')
 
     if first_number == second_number:
@@ -20,7 +18,8 @@ def greater_than_less_than(first_number, second_number):
     else:
         result = '<'
 
-    response = input("Is the first number greater than (>), less than (<), or equal to (=) the second number? [enter the symbol]").strip()
+    response = input("""Is the first number greater than (>), less than (<), or equal to (=) the second number? 
+    [enter either >, <, or =]:  """).strip()
 
     wrong_input = "Try again:  Your answer must either be >, <, or ="
 
@@ -33,10 +32,8 @@ def greater_than_less_than(first_number, second_number):
     while correct < 5:
 
         if response == result:
-            print('CORRECT!!! GREAT WORK!!!')
-            peter_rabbit_winking()
-
-            return 0
+            print('\nCORRECT!!! GREAT WORK!!!')
+            return gifs.wink()
 
         else:
             response = input(wrong_response)
@@ -47,3 +44,4 @@ def greater_than_less_than(first_number, second_number):
             correct += 1
 
     print("Sorry, either try again or ask for help.")
+    return gifs.nope()
