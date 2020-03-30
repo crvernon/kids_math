@@ -49,34 +49,45 @@ def greater_than_less_than(first_number, second_number):
 
 
 def add_to_five(number):
-    """Fill in.
+    """Add to the 5 by any number.
+
+    :param number:                          
 
     """
     gifs = FrozenGif()
     acceptable = (int, float)
 
-    if number in acceptable:
+    type_number = type(number)
+
+    if type_number in acceptable:
 
         # get answer
         answer = 5 + number
 
-        response = input("Enter the answer to 5 + {}?".format(number))
+        response = int(input("Enter the answer to 5 + {}?  ".format(number)))
         type_response = type(response)
 
         wrong_response = "Sorry! 5 + {} is not equal to {}.  Try again...".format(number, response)
 
-        correct = 0
-        while correct < 5:
+        if (type_response in acceptable) and (response == answer):
+            print('\n CORRECT!!! GREAT WORK!!!')
+            return gifs.walking()
 
-            if (type_response in acceptable) and (response == answer):
-                print('\n CORRECT!!! GREAT WORK!!!')
-                return gifs.walking()
+        else:
+            correct = 0
+            while correct < 5:
 
-            elif (type_response in acceptable) and (response != answer):
+                if (type_response in acceptable) and (response == answer):
+                    print('\n CORRECT!!! GREAT WORK!!!')
+                    return gifs.walking()
 
-                response = input(wrong_response)
-                
-                correct += 1
+                elif (type_response in acceptable) and (response != answer):
 
-        print("Sorry, either try again or ask for help.")
-        return gifs.olaf_heart()
+                    response = int(input(wrong_response))
+
+                    correct += 1
+                else:
+                    pass
+
+            print("Sorry, either try again or ask for help.")
+            return gifs.olaf_heart()
