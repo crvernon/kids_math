@@ -59,3 +59,22 @@ class FrozenGif:
         """Display Peter Rabbit saying no GIF"""
 
         return self.display_gif(FrozenGif.OLAF_HEART)
+
+
+class RapunzelGif:
+
+    # Source:  https://media.giphy.com/media/14rbfgZ6aTgwAo/giphy.gif
+    SWINGING = pkg_resources.resource_filename('kids_math', 'img/rapunzel_swinging.gif')
+
+    @staticmethod
+    def display_gif(gif):
+        """Display GIF in a Jupyter, CoLab, or IPython Notebook"""
+
+        with open(gif, 'rb') as f:
+
+            return display.Image(data=f.read(), format='png')
+
+    def swinging(self):
+        """Display Peter Rabbit winking GIF"""
+
+        return self.display_gif(RapunzelGif.SWINGING)

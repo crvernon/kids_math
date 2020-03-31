@@ -1,6 +1,7 @@
 """Common utility functions for the `kids_math` package"""
 
 from kids_math.video import GoodMorning
+from kids_math.gifs import RapunzelGif
 
 
 def valid_answer(response, acceptable, statement):
@@ -48,10 +49,18 @@ def skip_counting(start_number, through_number, by_number):
 
 
 def say_hello_fun(name):
-    """
+    """Fill in.
 
     :param name:                            string;  person's name
 
     """
     if name == name.lower():
         return GoodMorning().play_video()
+
+
+def celebrate():
+    """
+    Fill in.
+
+    """
+    return RapunzelGif().swinging()

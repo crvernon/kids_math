@@ -1,5 +1,6 @@
 from kids_math.utils import valid_answer
 from kids_math.gifs import PeterRabbitGif, FrozenGif
+# from kids_math.img import Images
 
 
 def greater_than_less_than(first_number, second_number):
@@ -91,3 +92,29 @@ def add_to_five(number):
 
             print("Sorry, either try again or ask for help.")
             return gifs.olaf_heart()
+
+
+# def rotational_symmetry():
+#     """Choose whether or not the object has rotational symmetry."""
+#
+#     response = input("""Your goal is to choose whether or not the image that will be shown has rotational symmetry by
+#     entering either "YES" or "NO".  Press [return] or [enter] to begin.  """)
+#
+#     if response.lower() in ('yes', 'no'):
+#
+#         return Images.display_img(Images.STAR)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
